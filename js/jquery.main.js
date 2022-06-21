@@ -4,17 +4,6 @@ $(document).ready(function() {
 
 	$('.counter').counterUp();
 
-	$("#contactForm").validator().on("submit", function (event) {
-		if (event.isDefaultPrevented()) {
-			// handle the invalid form...
-			formError();
-			submitMSG(false, "Please Follow Error Messages and Complete as Required");
-		} else {
-			// everything looks good!
-			event.preventDefault();
-		}
-	});
-
 	function formSuccess(){
 		$("#contactForm")[0].reset();
 		submitMSG(true, "Thank you for your submission :)")
